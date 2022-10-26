@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="titulo"><h2>Conversor Cripto</h2>
+            <p>Seleccione la criptomoneda que desea convertir y debajo coloque la cantidad.</p></div>
+        <form action="">
+            <div class="drop-list">
+                <select name="" id="criptoElegida">
+                    <option value="value1" selected>Ethereum (ETH)</option>
+                    <option value="value2">Bitcoin (BTC)</option>
+                    <option value="value3">Binance Coin (BNB)</option>
+                    <option value="value4">Cardano (ADA)</option>
+                    <option value="value5">Solana (SOL)</option>
+                    <option value="value6">Circle (USDC)</option>
+                </select>
+            </div>
+            <input type="number" id="ingreseValor" placeholder="Ingrese cantidad">
+            <button type="button" id="boton">
+                Calcular
+            </button>
+        </form>
+        <div class="texto">
+            <br>
+            <p id="enunciado"></p>
+            <p id="resultado"></p>
+            <p id="hora"></p>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
