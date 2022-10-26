@@ -38,8 +38,6 @@ function getValueInput() {
     
 
     let mostrarData = (data) => {
-        console.log(data)
-
         class Criptomonedas {
             constructor(nombreCorto, nombre, valorCripto, imagenCripto) {
                 this.short = nombreCorto
@@ -54,10 +52,11 @@ function getValueInput() {
         const BNB = new Criptomonedas("BNB", "Binance Coin", data[613].price, `<img src="media/BNB.png" alt="" >`)
         const ADA = new Criptomonedas("ADA", "Cardano", data[655].price, `<img src="media/ADA.png" alt="" >`)
         const SOL = new Criptomonedas("SOL", "Solana", data[780].price, `<img src="media/SOL.png" alt="" >`)
-        const USD = new Criptomonedas("BUSD", "Binance Dolar", 1, `<img src="media/BUSD.png" alt="" >`)
+        const XRP = new Criptomonedas("XRP", "Ripple", data[631].price, `<img src="media/XRP.png" alt="" >`)
+        const BUSD = new Criptomonedas("BUSD", "Binance USD", 1, `<img src="media/BUSD.png" alt="" >`)
 
 
-        listaCripto = [ETH, BTC, BNB, ADA, SOL, BUSD];
+        listaCripto = [ETH, BTC, BNB, ADA, SOL, XRP, BUSD];
 
         //funcion conversion y muestra
         function calculo(monto) {
