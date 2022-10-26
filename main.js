@@ -38,6 +38,7 @@ function getValueInput() {
     
 
     let mostrarData = (data) => {
+        console.log(data)
 
         class Criptomonedas {
             constructor(nombreCorto, nombre, valorCripto, imagenCripto) {
@@ -48,15 +49,15 @@ function getValueInput() {
             }
         }
 
-        const ETH = new Criptomonedas("ETH", "Ethereum", data[12].price, `<img src="media/ETH.png" alt="" >`)
-        const BTC = new Criptomonedas("BTC", "Bitcoin", data[11].price, `<img src="media/BTC.png" alt="" >`)
-        const BNB = new Criptomonedas("BNB", "Binance Coin", data[98].price, `<img src="media/BNB.png" alt="" >`)
-        const ADA = new Criptomonedas("ADA", "Cardano", data[296].price, `<img src="media/ADA.png" alt="" >`)
-        const SOL = new Criptomonedas("SOL", "Solana", data[779].price, `<img src="media/SOL.png" alt="" >`)
-        const USDC = new Criptomonedas("USDC", "Circle", 1, `<img src="media/USDC.png" alt="" >`)
+        const ETH = new Criptomonedas("ETH", "Ethereum", data[632].price, `<img src="media/ETH.png" alt="" >`)
+        const BTC = new Criptomonedas("BTC", "Bitcoin", data[614].price, `<img src="media/BTC.png" alt="" >`)
+        const BNB = new Criptomonedas("BNB", "Binance Coin", data[613].price, `<img src="media/BNB.png" alt="" >`)
+        const ADA = new Criptomonedas("ADA", "Cardano", data[655].price, `<img src="media/ADA.png" alt="" >`)
+        const SOL = new Criptomonedas("SOL", "Solana", data[780].price, `<img src="media/SOL.png" alt="" >`)
+        const USD = new Criptomonedas("USD", "Dolar", 1, `<img src="media/USDC.png" alt="" >`)
 
 
-        listaCripto = [ETH, BTC, BNB, ADA, SOL, USDC];
+        listaCripto = [ETH, BTC, BNB, ADA, SOL, USD];
 
         //funcion conversion y muestra
         function calculo(monto) {
