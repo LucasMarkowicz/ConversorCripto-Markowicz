@@ -3,13 +3,22 @@ let boton = document.getElementById("boton")
 boton.addEventListener("click", evitarDobleClick)
 boton.addEventListener("click", getValueInput)
 
+//jquery para aplicar click en enter
+$(document).keypress(function (x) {
+    var key = x.which;
+    if(key == 13) 
+     {
+       $('#boton').click();
+       return false;  
+     }
+   }); 
 
 // función que evita doble click
 function evitarDobleClick() {
     document.getElementById("boton").disabled = true;
     setTimeout(function() {
         document.getElementById("boton").disabled = false;
-    }, 50);
+    }, 500);
 }
 
 
@@ -25,8 +34,8 @@ function getValueInput() {
     let valor = y.value
 
     // obtener la fecha y la hora
-    let today = new Date();
-    let now = today.toLocaleString();
+    const today = new Date();
+    const now = today.toLocaleString();
 
 
     // api de binance
@@ -85,6 +94,7 @@ function getValueInput() {
             }
         }
     }
+
 }
 
 
