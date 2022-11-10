@@ -3,7 +3,7 @@ let boton = document.getElementById("boton")
 boton.addEventListener("click", evitarDobleClick)
 boton.addEventListener("click", getValueInput)
 
-//jquery para aplicar click en enter
+//jquery para aplicar click con enter
 $(document).keypress(function (x) {
     var key = x.which;
     if(key == 13) 
@@ -18,7 +18,7 @@ function evitarDobleClick() {
     document.getElementById("boton").disabled = true;
     setTimeout(function() {
         document.getElementById("boton").disabled = false;
-    }, 500);
+    }, 1000);
 }
 
 
@@ -56,20 +56,25 @@ function getValueInput() {
             }
         }
 
-        const ETH = new Criptomonedas("ETH", "Ethereum", data[632].price, `<img src="media/ETH.png" alt="" >`)
+        console.log(data)
+
+        const BUSD = new Criptomonedas("BUSD", "Binance USD", 1, `<img src="media/BUSD.png" alt="" >`)
         const BTC = new Criptomonedas("BTC", "Bitcoin", data[614].price, `<img src="media/BTC.png" alt="" >`)
+        const ETH = new Criptomonedas("ETH", "Ethereum", data[632].price, `<img src="media/ETH.png" alt="" >`)
         const BNB = new Criptomonedas("BNB", "Binance Coin", data[613].price, `<img src="media/BNB.png" alt="" >`)
         const ADA = new Criptomonedas("ADA", "Cardano", data[655].price, `<img src="media/ADA.png" alt="" >`)
-        const SOL = new Criptomonedas("SOL", "Solana", data[780].price, `<img src="media/SOL.png" alt="" >`)
         const XRP = new Criptomonedas("XRP", "Ripple", data[631].price, `<img src="media/XRP.png" alt="" >`)
-        const BUSD = new Criptomonedas("BUSD", "Binance USD", 1, `<img src="media/BUSD.png" alt="" >`)
+        const DOGE = new Criptomonedas("DOGE", "Dogecoin", data[879].price, `<img src="media/DOGE.png" alt="" >`)
+        const MATIC = new Criptomonedas("MATIC", "Polygon", data[802].price, `<img src="media/MATIC.png" alt="" >`)
+        const DOT = new Criptomonedas("DOT", "Polkadot", data[953].price, `<img src="media/DOT.png" alt="" >`)
+        const SOL = new Criptomonedas("SOL", "Solana", data[780].price, `<img src="media/SOL.png" alt="" >`)
 
 
-        listaCripto = [ETH, BTC, BNB, ADA, SOL, XRP, BUSD];
+        listaCripto = [BUSD, BTC, ETH, BNB, ADA, XRP, DOGE, MATIC, DOT, SOL];
 
         //funcion conversion y muestra
         function calculo(monto) {
-            let a = (parseFloat(valor) * monto / listaCripto[j].valueC);
+            let a = (parseFloat(valor) * monto / listaCripto[j].valueC);       
             document.getElementById("resultado").innerHTML += `Tu valor en ${listaCripto[j].img} ${listaCripto[j].name} (${listaCripto[j].short}) es ${a.toFixed(3)} <br><br>`
         }
     

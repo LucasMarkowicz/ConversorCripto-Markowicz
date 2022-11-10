@@ -21,14 +21,14 @@ body{
 }
 .wrapper{
   width: 390px;
-  padding: 20px;
+  padding: 12px;
   border-radius: 7px;
   background: #fff;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
 }
 
 .wrapper form{
-  margin: 40px 0 0 0;
+  margin: 18px 0 0 0;
 }
 
 form :where(input, select, button){
@@ -38,63 +38,35 @@ form :where(input, select, button){
   border: none;
 }
 
-form p{
-  font-size: 18px;
-  margin-bottom: 5px;
+.drop-list {
+display: flex;
+flex-direction: row;
+column-gap: 15px;
+justify-content: center;
 }
-form input{
-  margin-top: 20px;  
+
+#criptoElegida {
+  width: 175px;  
   height: 35px;
-  font-size: 15px;
-  padding: 0 15px;
+  font-size: 13px;
+  padding: 0 10px;
   border: 1px solid #999;
 }
-form input:focus{
-  padding: 0 14px;
-  border: 2px solid #675AFE;
-}
-form .drop-list{
-  display: flex;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: space-between;
-}
-.drop-list .select-box{
-  display: flex;
-  width: 115px;
-  height: 45px;
-  align-items: center;
-  border-radius: 5px;
-  justify-content: center;
+
+form input{
+  width: 175px;  
+  height: 35px;
+  font-size: 13px;
+  padding: 0 10px;
   border: 1px solid #999;
-}
-.select-box img{
-  max-width: 21px;
-}
-.select-box select{
-  width: auto;
-  font-size: 16px;
-  background: none;
-  margin: 0 -5px 0 5px;
-}
-.select-box select::-webkit-scrollbar{
-  width: 8px;
-}
-.select-box select::-webkit-scrollbar-track{
-  background: #fff;
-}
-.select-box select::-webkit-scrollbar-thumb{
-  background: #888;
-  border-radius: 8px;
-  border-right: 2px solid #ffffff;
 }
 
 
 form button{
   margin-top: 20px;
-  height: 40px;
+  height: 35px;
   color: #fff;
-  font-size: 17px;
+  font-size: 16px;
   cursor: pointer;
   background: #675AFE;
   transition: 0.3s ease;
@@ -113,6 +85,7 @@ img {
 
 
 .titulo h2{
+  font-size: 22px;
     text-align: center;
 }
 
@@ -121,10 +94,9 @@ img {
 }
 
 p { 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #hora{
-    margin-top: 8px;
     text-align: center;
 }
